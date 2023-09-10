@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: #f0f0f0;
+}
+
+.form {
+  width: 500px;
+}
+
+.form__fieldset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(228, 124, 5, 0.479);
+  background-color: white;
+}
+
+.form__legend {
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(218, 124, 5, 0.479);
+  padding: 2px 7px 2px 7px;
+  margin-left: 35px;
+}
+
+.form__container {
+  width: 300px;
+  margin: 30px;
+  text-align: center;
+}
+
+.form__label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.form__input,
+.form__fieldset-radio {
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  border: 1px solid orange;
+}
+
+.form__label,
+.form__input {
+  display: block;
+  width: 100%;
+}
+
+.form__container-sd {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+.form__container-sd div {
+  width: 50%;
+}
+
+.form__select,
+.form__date {
+  width: 100%;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid orange;
+  background-color: white;
+  height: 30px;
+}
+
+.form__button {
+  background-color: orange;
+  border-radius: 5px;
+  width: 70%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  box-shadow:  5px 5px 5px rgba(228, 124, 5, 0.479);
+  transition: background-color 0.5s;
+
+}
+
+p {
+  font-weight: 600;
+}
+
+.form__field-radio {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form__button:hover {
+  background-color: rgb(247, 133, 3);
+  cursor: pointer;
+}
+
+.form__field-terms {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+}
+
+input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+#terms {
+  margin-left: 50px;
+}

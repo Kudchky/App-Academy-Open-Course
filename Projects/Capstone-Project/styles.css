@@ -1,0 +1,155 @@
+@import url("/reset-styles.css");
+
+.header {
+  font-family: monospace;
+  font-size: 25px;
+  margin: 0 0 50px 0;
+  padding: 0 20px 0 20px;
+  position: sticky;
+  top: 0;
+  background-color: #f7f8fa;
+}
+
+.header__section-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.header__nav-2 li:hover {
+  cursor: pointer;
+  border-bottom: 2px solid black;
+  margin-top: -3px;
+}
+
+.header__nav-1 li:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+  color: black;
+}
+
+.header__section-1 li {
+  padding: 20px;
+  font-weight: bold;
+  color: #817e7e;
+}
+
+.header__section-2 li {
+  font-size: 18px;
+  padding: 20px;
+  font-weight: 500;
+  color: #817e7e;
+
+}
+
+.header__logo {
+  font-size: 60px;
+  color: black;
+  font-weight: bold;
+}
+
+.header__aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 0;
+  gap: 25px;
+}
+
+.header__section-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.header__aside img {
+  width: 30px;
+  height: 30px;
+}
+
+.header__section-search {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.header__search {
+  width: 300px;
+  height: 30px;
+  border: 2px solid #b1b0b0;
+  border-radius: 5px 0 0 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.header__icon-search {
+  border: 2px solid #b1b0b0;
+  border-radius: 0 5px 5px 0;
+  width: 30px;
+  height: 30px;
+  background-color: #b1b0b0;
+}
+
+.header__icon-search:hover {
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main__banner {
+  max-width: 1307px;
+  max-height: 532px;
+}
+
+.main__shop-ocassion {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.main__h2 {
+  font-size: 36px;
+  margin-top: 70px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.main__shop-category {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.main__shop-category img {
+  width: 215px;
+  height: 95px;
+}
+
+@media screen and (max-width: 768px) {
+  .header__section-1 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header__nav ul {
+    margin-top: 10px;
+  }
+
+  .header__aside {
+    margin-top: 10px;
+  }
+}
