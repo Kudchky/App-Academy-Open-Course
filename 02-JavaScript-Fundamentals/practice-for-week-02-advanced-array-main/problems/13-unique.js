@@ -14,14 +14,22 @@ console.log(unique(['a', 'b', 'c', 'b'])); // ['a', 'b', 'c']
 
 */
 
-let unique = function(array) {
-    // Your code here
+let unique = function (array) {
+  // Your code here
+  //return [...new Set(array)];
+  array.forEach((el) =>
+    array.indexOf(el) !== array.lastIndexOf(el)
+      ? array.splice(array.lastIndexOf(el), 1)
+      : true
+  );
+
+  return array;
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-    module.exports = unique;
+  module.exports = unique;
 } catch (e) {
-    module.exports = null;
-}
+  module.exports = null;
+}

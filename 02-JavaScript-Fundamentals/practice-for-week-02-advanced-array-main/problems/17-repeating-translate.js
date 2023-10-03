@@ -27,20 +27,36 @@ console.log(repeatingTranslate("pasta is my favorite dish"));   // "pastapasta i
 console.log(repeatingTranslate("her family flew to France"));   // "herer familyily flewew to FranceFrance"
 
 */
-
-let repeatingTranslate = function(sentence) {
-    // Your code here
+let translateWord = function (word) {
+  // Your code here
+  if (word.length < 3) {
+    return word;
+  }
+  if (word.length >= 3) {
+    if ("aeiou".includes(word[word.length - 1])) {
+      return word.repeat(2);
+    } else {
+      for (let i = word.length - 1; i >= 0; i--) {
+        let char = word[i];
+        if ("aeiou".includes(char)) {
+          return word + word.slice(i);
+        }
+      }
+    }
+  }
 };
 
+let repeatingTranslate = function (sentence) {
+  // Your code here
+  const arr = sentence.split(" ");
 
-let translateWord = function(word) {
-    // Your code here
+  return arr.map(translateWord).join(" ");
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-    module.exports = repeatingTranslate;
+  module.exports = repeatingTranslate;
 } catch (e) {
-    module.exports = null;
-}
+  module.exports = null;
+}
