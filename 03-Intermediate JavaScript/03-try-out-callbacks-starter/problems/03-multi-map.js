@@ -21,8 +21,12 @@ let result3 = multiMap("hi", 5, function(s) {
 console.log(result3); // hi!!!!!
 *******************************************************************************/
 
-let multiMap = function() {
+let multiMap = function(value, n, cb) {
+  for (let i = 1; i <= n; i++){
+    value = cb(value);
+  }
 
+  return value;
 };
 
 
