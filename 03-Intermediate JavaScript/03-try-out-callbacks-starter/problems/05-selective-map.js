@@ -41,12 +41,30 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 - What do you expect each callback function to be returning?
 - How many times are you calling each callback function?
 *******************************************************************************/
+function isEven(n) {
+    return n % 2 === 0;
+}
 
-let selectiveMap = function() {
+function square(n) {
+    return n * n;
+}
 
+let selectiveMap = function(arr, cb1, cb2 ) {
+    const result = [];
+
+    for (let el of arr){
+        if(cb1(el)){
+            result.push(cb2(el));
+        } else {
+            result.push(el);
+        }
+    }
+
+    return result;
 };
 
-
+console.log(selectiveMap([8, 5, 10, 4], isEven, square));
+// [ 64, 5, 100, 16 ]
 
 
 
