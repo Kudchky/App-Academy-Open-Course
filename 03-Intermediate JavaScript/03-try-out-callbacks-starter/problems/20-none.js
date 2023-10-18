@@ -28,8 +28,12 @@ let result4 = none([4, -5, 7, -1], function(n) {
 console.log(result4);   // false
 *******************************************************************************/
 
-let none = function() {
-
+let none = function(arr, cb) {
+    //return arr.every(el => !cb(el))
+    for (let el of arr){
+        if(cb(el)) return false;
+    }
+    return true;
 };
 
 
