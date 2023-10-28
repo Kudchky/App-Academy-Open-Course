@@ -44,7 +44,38 @@ AFTER YOU ARE FINISHED WITH THIS PROBLEM, ASK FOR A CODE REVIEW
 
 function curriedSum(numArgs) {
   // Your code here
+  // const numbers = [];
+  // let count = 0;
+
+  // return (value) => {
+  //   count++;
+  //   if(count === numArgs){
+  //     numbers.push(value);
+  //     return numbers.reduce((acc, num) => acc + num, 0);
+  //   } else {
+  //     numbers.push(value);
+  //   }
+  // }
+  const numbers = [];
+
+  function _curriedSum(number) {
+      numbers.push(number);
+
+      if (numbers.length === numArgs) {
+          const sum = numbers.reduce((acc, cur) => acc + cur, 0);
+          return sum;
+      } else {
+          return _curriedSum;
+      }
+  }
+
+  return _curriedSum;
 }
+
+
+
+//const sum = curriedSum(3)(2)(1)(7); // => returns 10
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = curriedSum;
