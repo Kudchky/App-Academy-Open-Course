@@ -12,9 +12,11 @@ iceCreamShop(['moose tracks'], 'moose tracks'); // true
 iceCreamShop([], 'honey lavender'); // false
 ***********************************************************************/
 
-
 // your code here
-
+const iceCreamShop = (flavors, favorite) => {
+ if(flavors.length === 0) return false;
+  return flavors[0] === favorite ? true :iceCreamShop(flavors.slice(1), favorite);
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
