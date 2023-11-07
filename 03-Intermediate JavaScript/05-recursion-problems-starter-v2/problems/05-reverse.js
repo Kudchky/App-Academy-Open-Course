@@ -13,7 +13,11 @@ reverse(""); // ""
 ***********************************************************************/
 
 // your code here
+const  reverse = (str) => {
+  if(str === '') return '';
 
+  return str[str.length - 1] + reverse(str.slice(0,str.length - 1));
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = reverse;
