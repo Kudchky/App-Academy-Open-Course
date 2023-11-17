@@ -11,7 +11,10 @@ flatten([1, [2, [3]]]); // [1, 2, 3]
 ***********************************************************************/
 
 // your code here
+const flatten = (arr) => {
   
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {
   module.exports = flatten;
