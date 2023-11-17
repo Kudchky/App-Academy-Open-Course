@@ -55,4 +55,5 @@ try {
   module.exports = advancedExponent;
 } catch (e) {
   module.exports = null;
+
 }
